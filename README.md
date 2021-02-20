@@ -1,112 +1,163 @@
-## Jasper2
+### devlopr-jekyll - A Beautiful Jekyll Theme Built for Developers
 
-[![Build Status](https://travis-ci.org/jekyller/jasper2.svg?branch=master)](https://travis-ci.org/jekyller/jasper2)
-[![Ruby](https://img.shields.io/badge/ruby-2.5.1-blue.svg?style=flat)](http://travis-ci.org/jekyller/jasper2)
-[![Jekyll](https://img.shields.io/badge/jekyll-3.7.4-blue.svg?style=flat)](http://travis-ci.org/jekyller/jasper2)
+[![Gem Version](https://badge.fury.io/rb/devlopr.svg)](https://badge.fury.io/rb/devlopr)![workflow-badge](https://github.com/sujaykundu777/devlopr-jekyll/workflows/deploy/badge.svg)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/4232ac2b-63e0-4c78-92e0-e95aad5ab8c3/deploy-status)](https://app.netlify.com/sites/devlopr/deploys)
+![](https://ruby-gem-downloads-badge.herokuapp.com/devlopr?type=total&color=brightgreen&style=plastic)
+[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
+[![Bakers](https://opencollective.com/devlopr-jekyll/tiers/badge.svg)](https://opencollective.com/devlopr-jekyll/)
 
-This is a full-featured port of Ghost's default theme [Casper](https://github.com/tryghost/casper)
-*v2.1.9* for [Jekyll](https://jekyllrb.com/) / [GitHub Pages](https://pages.github.com/).
+Just a little something I'm using to jump start a site refresh. I like to think of it as a starter for building your own Jekyll site. I purposely keep the styling minimal and bare to make it easier to add your own flare and markup. (Under Active Development) !
 
-## Live Demo
+Highly Customizable and No Hosting or Maintainence Cost is required !
 
-[Ghost's Casper](https://demo.ghost.io) // [Jasper2](https://jekyller.github.io/jasper2)
+### [Installation Guide](https://devlopr.netlify.app/get-started)
 
-![home page](https://raw.githubusercontent.com/jekyller/jasper2/master/assets/screenshot-desktop.jpg)
+![devlopr jekyll](https://github.com/sujaykundu777/devlopr-jekyll/blob/master/assets/img/screenshot.PNG?raw=true)
 
+devlopr uses Markdown Files to generate data like Blog Posts, Gallery, Shop Products etc. No external database is required.
 
-## Features
+### [Get Started Locally]
 
-* Out of the box support for multiple authors (via `_data/authors.yml`)
-* Full author information including: picture, bio, website, twitter, facebook, etc.
-* Tag description(s) and personalised covers (via `_data/tags.yml`)
-* Related posts view at the bottom of each post
-* All Ghost default pages: Author page(s), Tag page(s), About page(s), 404, etc.
-* Pagination (infinite scrolling or standard pagination, i.e. posts across multiple pages)
-* Atom Feeds by [Jekyll-feed](https://github.com/jekyll/jekyll-feed)
-* Toggleable subscribe button (requires an external service)
-* Code Syntax Highlight with [highlight.js](https://highlightjs.org/)
-* Support for Google Analytics tracking
-* Support for Disqus comments (not Ghost standard)
+To get started follow this [tutorial](https://devlopr.netlify.app/get-started).Then follow the below commands to start the server locally at http://127.0.0.1:4000/.
 
-
-## Getting Started
-
-### Deployment
-
-**Important:**  For security reasons, Github does not allow plugins (under `_plugins/`) when
-deploying with Github Pages. This means that we have to do one of the following:
-
-**1)** generate the site locally (more details below) and push the resulting
-HTML (the contents of `_site/` or `../jasper2-pages/`) to a Github repository, that GitHub Pages
-then host;
-
-**2)** build the site with [travis-ci](https://travis-ci.org/) (with goodies from
-[jekyll-travis](https://github.com/mfenner/jekyll-travis)) automatically pushing the
-generated HTML files to a *gh-pages* branch.
-This later approach is the one I am currently using to generate the live demo.
-
-**3)** deploy the static website with Jekyll-compatible hosters, such as https://www.netlify.com/, that allow for deployment from the Github repo and publish the website using CDNs. Netlify has a free starter offer.
-
-For option **1)** simply clone this repository (*master branch*), and then run
-`bundle exec jekyll serve` inside the directory. Upload the resulting `_site/` (or `../jasper2-pages/`)
-contents to your repository (*master branch* if uploading as your personal page
-(e.g. username.github.io) or *gh-pages branch* if uploading as a project page
-(as for the [demo](https://github.com/jekyller/jasper2/tree/gh-pages)).
-
-For option **2)** you will need to set up travis-ci for your personal fork. Briefly all you
-need then is to change your details in *[\_config.yml](_config.yml)* so that you can push
-to your github repo. You will also need to generate a secure key to add to your
-*[.travis.yml](.travis.yml)* (you can find more info on how to do it in that file).
-Also make sure you read the documentation from
-[jekyll-travis](https://github.com/mfenner/jekyll-travis). This approach has clear
-advantages in that you simply push your file changes to GitHub and all the HTML files
-are generated for you and pushed to *gh-pages*. Also you get to know if everything is
-still fine with your site builds. Don't hesitate to contact me if you still have any
-issues (see below about issue tracking).
-
-### Author Pages
-
-In order to properly generate author pages you need to rename the field *author* in the
-front matter of every post to match that of your each author's *username* as defined
-in the *[\_data/authors.yml](_data/authors.yml)* file.
-With the latest update, multiple author blogs are now supported out of the box.
-
-### Compiling Styles
-
-Following on the way Casper styles are compiled as [described here](https://github.com/tryghost/casper#development):
-
-Jasper2 styles are compiled using Gulp/PostCSS to polyfill future CSS spec. You'll need Node and Gulp installed globally. After that, from the theme's root directory:
-
-```bash
-$ npm install
-$ gulp
+```sh
+$ git clone https://github.com/your_github_username/your_github_username.github.io.git
+$ cd your_github_username
+$ ruby -v
+$ gem install bundler
+$ bundler -v
+$ bundle add jekyll
+$ bundle exec jekyll -v
+$ bundle update
+$ bundle install
+$ bundle exec jekyll serve --watch
 ```
 
-Now you can edit `/assets/css/` files, which will be compiled to `/assets/built/` automatically.
+### Deploy your devlopr-jekyll blog - One Click Deploy
 
-## Issues and Contributing
+[![Deploy with ZEIT Now](https://zeit.co/button)](https://zeit.co/new/project?template=https://github.com/sujaykundu777/devlopr-jekyll)
+[![Deploy with Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/sujaykundu777/devlopr-jekyll)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/sujaykundu777/devlopr-jekyll)
 
-This install builds well with Ruby v2.5.1 and Jekyll v3.7.4. If you run into any problems
-please log them on the [issue tracker](https://github.com/jekyller/jasper2/issues).
+### Demo (Hosted Apps)
 
-Feel free pull-request your patches and fixes.
+- Github Pages Demo - [here](https://sanketkundu.github.io/)
+- Firebase Demo - [here](https://devlopr.web.app)
+- Netlify Demo - [here](https://devlopr.netlify.com)
+- Zeit Now Demo - [here](https://devlopr-jekyll.now.sh)
+- Heroku Demo - [here](https://devlopr-jekyll.herokuapp.com)
+- AWS Amplify Demo - [here](https://master.d3t30wwddt6jju.amplifyapp.com/)
 
-## Thanks
+#### Features :
 
+- Local CMS Admin Support using [Jekyll Admin](https://jekyll.github.io/jekyll-admin/)
+- Onine CMS Admin Support using [Netlify CMS](https://sujaykundu.com/blog/how-to-setup-netlify-cms-with-github-pages-hosted-jekyll-blog/), Forestry, Siteleaf, CloudCannon.
+- Supports Latest [Jekyll 4.x](https://jekyllrb.com) and [Bundler](https://bundler.io)
+- Stylesheet built using Sass
+- Comments using [Hyvor](https://talk.hyvor.com/) and [Disqus](https://disqus.com/)
+- SEO-optimized
+- Real Time Search
+- Sell Stuff (Ecommerce) in your Blog using [Snipcart](https://snipcart.com/)
+- Send Newsletters using [Mailchimp](https://mailchimp.com/)
+- Contact Forms using [Formspree](https://formspree.io/)
+- Coding Activity using [Wakatime](https://wakatime.com/)
+- Hosting Support for [Github Pages](https://pages.github.com), [Netlify](https://netlify.com), [Zeit](https://zeit.co), [Heroku](https://heroku.com), [AWS Amplify](aws.amplify.com), [Firebase](https://firebase.com)
+- CI/CD Support using [Travis CI](https://sujaykundu.com/blog/deploy-jekyll-blog-using-github-pages-and-travis-ci/), Buddy , Circle CI
 
-Many thanks to the Ghost team for all the design work. Also many thanks to all contributors,
-that help keeping the project alive and updated :smile:
+#### Jekyll Admin
+You can easily manage the site locally using the Jekyll admin : [http://localhost:4000/admin](http://localhost:4000/admin)
 
+![Jekyll Admin](https://github.com/sujaykundu777/devlopr-jekyll/blob/master/assets/img/jekyll-admin.PNG?raw=true)
 
-## Copyright & License
+## Recent Release Changes (v 0.4.7):
 
-Same licence as the one provided by Ghost's team. See Casper's theme [license](GHOST.txt).
+- Minor Bug fixes and optimizations
+- [Added Support for Multi Authors](https://devlopr.netlify.app/blog/added-multi-author-support/#/)
+- [Added Support for Math Symbols](https://devlopr.netlify.app/blog/added-latex-equations-support/#/)
 
-Copyright (C) 2015-2018 - Released under the MIT License.
+You can check out for all changelogs [here](https://www.buymeacoffee.com/sujaykundu/release-v-0-4-7)
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+## Pull the latest changes
 
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+```s
+git remote -v
+git remote add upstream https://github.com/sujaykundu777/devlopr-jekyll.git
+git fetch upstream
+git checkout master
+git merge upstream/master
+git push
+```
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+## Using Docker :
+
+Building the Image :
+
+`docker build -t my-devlopr-jekyll-blog .`
+
+Running the container :
+
+`docker run -d -p 4000:4000 -it --volume="$PWD:/srv/jekyll" --name "my_blog" my-devlopr-jekyll-blog:latest jekyll serve --watch`
+
+## Using Docker Compose :
+
+### Development :
+
+You can run the app in development mode : (your changes will be reflected --watch moded)
+
+Serve the site at http://localhost:4000 :
+
+`docker-compose -f docker-compose-dev.yml up --build --remove-orphans`
+
+### Production :
+
+You can run the app in production mode : (your changes will be reflected --watch moded)
+
+Serve the site at http://localhost:4000 :
+
+`docker-compose -f docker-compose-prod.yml up --build --remove-orphans`
+
+Stop the app :
+`docker-compose -f docker-compose-prod.yml down`
+Once everything is good and ready to go live -
+
+`docker-compose -f docker-compose-prod.yml up --build --detach`
+
+## Contributors:
+
+This project exists thanks to all the people who contribute.
+
+Contributions are more than just welcome. Fork this repo and create a new branch, then submit a pull request
+
+- 1.Fork it [http://github.com/sujaykundu777/devlopr-jekyll/fork](http://github.com/sujaykundu777/devlopr-jekyll/fork )
+
+- 2.Create your feature branch
+`git checkout -b my-new-feature`
+
+- 3.Commit your changes
+`git commit -am 'Add some feature'`
+
+- 4.Push to the branch
+`git push origin my-new-feature`
+
+- 5.Create new Pull Request
+
+### Remove Credits
+
+You can remove credits/footer attribution links, by Donating $5 to our [Open Collective](https://opencollective.com/devlopr-jekyll/donate) or [Buymeacoffee](https://buymeacoffee.com/sujaykundu).
+
+Thanks to all our Backers ! 🙏 [Become a Backer](https://opencollective.com/devlopr-jekyll#backer)
+
+<a href="https://opencollective.com/devlopr-jekyll#backers" target="_blank"><img src="https://opencollective.com/devlopr-jekyll/backers.svg?width=890" /></a>
+
+Also thanks to some cool people for raising funds:
+
+[Dirish Mohan](https://dirishmohan.com)
+
+### For Help :
+
+You can contact me, if you need any help via [Email](mailto:sujaykundu777@gmail.com). If you like the project. Don't forget to :star: !
+
+## Licence
+
+The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT). You can do anything you want, including projects for your clients, as long as you mention an attribution back (credit links in footer). See the [Licence](https://github.com/sujaykundu777/devlopr-jekyll/blob/master/LICENSE) file
+
