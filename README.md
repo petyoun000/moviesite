@@ -1,163 +1,105 @@
-### devlopr-jekyll - A Beautiful Jekyll Theme Built for Developers
+# [Square Zero - Dark and Elegant Blog](https://squarezero.github.io/)
 
-[![Gem Version](https://badge.fury.io/rb/devlopr.svg)](https://badge.fury.io/rb/devlopr)![workflow-badge](https://github.com/sujaykundu777/devlopr-jekyll/workflows/deploy/badge.svg)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/4232ac2b-63e0-4c78-92e0-e95aad5ab8c3/deploy-status)](https://app.netlify.com/sites/devlopr/deploys)
-![](https://ruby-gem-downloads-badge.herokuapp.com/devlopr?type=total&color=brightgreen&style=plastic)
-[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
-[![Bakers](https://opencollective.com/devlopr-jekyll/tiers/badge.svg)](https://opencollective.com/devlopr-jekyll/)
+## [Based off Start Bootstrap - Clean Blog](https://startbootstrap.com/template-overviews/clean-blog/) - Official Jekyll Version
+[Clean Blog](http://startbootstrap.com/template-overviews/clean-blog/) is a stylish, responsive blog theme for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/). This theme features a blog homepage, about page, contact page, and an example post page along with a working contact form powered by [Formspree](https://formspree.io/).
 
-Just a little something I'm using to jump start a site refresh. I like to think of it as a starter for building your own Jekyll site. I purposely keep the styling minimal and bare to make it easier to add your own flare and markup. (Under Active Development) !
+This repository holds the official Jekyll version of Square Zero!
 
-Highly Customizable and No Hosting or Maintainence Cost is required !
+## Preview
 
-### [Installation Guide](https://devlopr.netlify.app/get-started)
+[![Clean Blog (Jekyll) Preview](https://startbootstrap.com/assets/img/templates/clean-blog.jpg)](http://blackrockdigital.github.io/startbootstrap-clean-blog-jekyll/)
 
-![devlopr jekyll](https://github.com/sujaykundu777/devlopr-jekyll/blob/master/assets/img/screenshot.PNG?raw=true)
+<img src="https://i.imgur.com/LLwpiPS.png" width="300">
 
-devlopr uses Markdown Files to generate data like Blog Posts, Gallery, Shop Products etc. No external database is required.
+## Installation & Setup
 
-### [Get Started Locally]
+### Using RubyGems:
 
-To get started follow this [tutorial](https://devlopr.netlify.app/get-started).Then follow the below commands to start the server locally at http://127.0.0.1:4000/.
+When installing the theme using RubyGems, demo images, posts, and pages are not included. Follow the instructions below for complete setup.
 
-```sh
-$ git clone https://github.com/your_github_username/your_github_username.github.io.git
-$ cd your_github_username
-$ ruby -v
-$ gem install bundler
-$ bundler -v
-$ bundle add jekyll
-$ bundle exec jekyll -v
-$ bundle update
-$ bundle install
-$ bundle exec jekyll serve --watch
+1. (Optional) Create a new Jekyll site: `jekyll new my-site`
+2. Replace the current theme in your `Gemfile` with `gem "jekyll-theme-clean-blog"`.
+3. Install the theme: `bundle install`
+4. Replace the current theme in your `_config.yml` file with `theme: jekyll-theme-awesome`.
+5. Build your site: `bundle exec jekyll serve`
+
+Assuming there are no errors and the site is building properly, follow these steps next:
+
+1. Create the following pages if they do not exist already (or change the extension of exsiting markdown files from `.md` to `.html`):
+   - `index.html` - set to `layout: home`
+   - `about.html` - set to `layout: page`
+   - `contact.html` - set to `layout: page`
+   - `posts/index.html` - set to `layout: page` (you will also need to create a `posts` directory)
+2. Configure the `index.html` front matter. Example:
+```
+---
+layout: home
+background: '/PATH_TO_IMAGE'
+---
+```
+3. Configure the `about.html`, `contact.html`, and `posts/index.html` front matter. Example:
+```
+---
+layout: page
+title: Page Title
+description: This is the page description.
+background: '/PATH_TO_IMAGE'
+---
+```
+4. For each post in the `_posts` directory, update the front matter. Example:
+```
+---
+layout: post
+title: "Post Title"
+subtitle: "This is the post subtitle."
+date: YYYY-MM-DD HH:MM:SS
+background: '/PATH_TO_IMAGE'
+---
 ```
 
-### Deploy your devlopr-jekyll blog - One Click Deploy
+For reference, look at the [demo repository](https://github.com/BlackrockDigital/startbootstrap-clean-blog-jekyll) to see how the files are set up.
 
-[![Deploy with ZEIT Now](https://zeit.co/button)](https://zeit.co/new/project?template=https://github.com/sujaykundu777/devlopr-jekyll)
-[![Deploy with Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/sujaykundu777/devlopr-jekyll)
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/sujaykundu777/devlopr-jekyll)
 
-### Demo (Hosted Apps)
+5. Build your site: `bundle exec jekyll serve`
 
-- Github Pages Demo - [here](https://sanketkundu.github.io/)
-- Firebase Demo - [here](https://devlopr.web.app)
-- Netlify Demo - [here](https://devlopr.netlify.com)
-- Zeit Now Demo - [here](https://devlopr-jekyll.now.sh)
-- Heroku Demo - [here](https://devlopr-jekyll.herokuapp.com)
-- AWS Amplify Demo - [here](https://master.d3t30wwddt6jju.amplifyapp.com/)
+### Using Core Files
 
-#### Features :
+When using the core files, the demo images, posts, and pages are all included with the download. After following the instructions below, you can then go and change the content of the pages and posts.
 
-- Local CMS Admin Support using [Jekyll Admin](https://jekyll.github.io/jekyll-admin/)
-- Onine CMS Admin Support using [Netlify CMS](https://sujaykundu.com/blog/how-to-setup-netlify-cms-with-github-pages-hosted-jekyll-blog/), Forestry, Siteleaf, CloudCannon.
-- Supports Latest [Jekyll 4.x](https://jekyllrb.com) and [Bundler](https://bundler.io)
-- Stylesheet built using Sass
-- Comments using [Hyvor](https://talk.hyvor.com/) and [Disqus](https://disqus.com/)
-- SEO-optimized
-- Real Time Search
-- Sell Stuff (Ecommerce) in your Blog using [Snipcart](https://snipcart.com/)
-- Send Newsletters using [Mailchimp](https://mailchimp.com/)
-- Contact Forms using [Formspree](https://formspree.io/)
-- Coding Activity using [Wakatime](https://wakatime.com/)
-- Hosting Support for [Github Pages](https://pages.github.com), [Netlify](https://netlify.com), [Zeit](https://zeit.co), [Heroku](https://heroku.com), [AWS Amplify](aws.amplify.com), [Firebase](https://firebase.com)
-- CI/CD Support using [Travis CI](https://sujaykundu.com/blog/deploy-jekyll-blog-using-github-pages-and-travis-ci/), Buddy , Circle CI
+1. [Download](https://github.com/BlackrockDigital/startbootstrap-clean-blog-jekyll/archive/master.zip) or Clone the repository.
+2. Update the following configuration settings in your `_config.yml` file:
+   - `baserul`
+   - `url`
+   - `title`
+   - `email` (after setting this setting to a working email address, fill out the form on the contact page and send it - then check your email and verify the address and the form will send you messages when used)
+   - `description`
+   - `author`
+   - `twitter_username` (Optional)
+   - `facebook_username` (Optional)
+   - `github_username` (Optional)
+3. Build your site: `bundle exec jekyll serve`
 
-#### Jekyll Admin
-You can easily manage the site locally using the Jekyll admin : [http://localhost:4000/admin](http://localhost:4000/admin)
+## Bugs and Issues
 
-![Jekyll Admin](https://github.com/sujaykundu777/devlopr-jekyll/blob/master/assets/img/jekyll-admin.PNG?raw=true)
+Please credit the thumbnail artists if you do use others' work.
+Have a bug or an issue with this template? [Open a new issue](https://github.com/BlackrockDigital/startbootstrap-clean-blog-jekyll/issues) here on GitHub!
 
-## Recent Release Changes (v 0.4.7):
+## About
 
-- Minor Bug fixes and optimizations
-- [Added Support for Multi Authors](https://devlopr.netlify.app/blog/added-multi-author-support/#/)
-- [Added Support for Math Symbols](https://devlopr.netlify.app/blog/added-latex-equations-support/#/)
+Start Bootstrap is an open source library of free Bootstrap templates and themes. All of the free templates and themes on Start Bootstrap are released under the MIT license, which means you can use them for any purpose, even for commercial projects.
 
-You can check out for all changelogs [here](https://www.buymeacoffee.com/sujaykundu/release-v-0-4-7)
+* https://startbootstrap.com
+* https://twitter.com/SBootstrap
 
-## Pull the latest changes
+Start Bootstrap was created by and is maintained by **[David Miller](http://davidmiller.io/)**, Owner of [Blackrock Digital](http://blackrockdigital.io/).
 
-```s
-git remote -v
-git remote add upstream https://github.com/sujaykundu777/devlopr-jekyll.git
-git fetch upstream
-git checkout master
-git merge upstream/master
-git push
-```
+* http://davidmiller.io
+* https://twitter.com/davidmillerskt
+* https://github.com/davidtmiller
 
-## Using Docker :
+Square Zero Theme built by [surajk95](https://github.com/surajk95).
+Start Bootstrap is based on the [Bootstrap](http://getbootstrap.com/) framework created by [Mark Otto](https://twitter.com/mdo) and [Jacob Thorton](https://twitter.com/fat).
 
-Building the Image :
+## Copyright and License
 
-`docker build -t my-devlopr-jekyll-blog .`
-
-Running the container :
-
-`docker run -d -p 4000:4000 -it --volume="$PWD:/srv/jekyll" --name "my_blog" my-devlopr-jekyll-blog:latest jekyll serve --watch`
-
-## Using Docker Compose :
-
-### Development :
-
-You can run the app in development mode : (your changes will be reflected --watch moded)
-
-Serve the site at http://localhost:4000 :
-
-`docker-compose -f docker-compose-dev.yml up --build --remove-orphans`
-
-### Production :
-
-You can run the app in production mode : (your changes will be reflected --watch moded)
-
-Serve the site at http://localhost:4000 :
-
-`docker-compose -f docker-compose-prod.yml up --build --remove-orphans`
-
-Stop the app :
-`docker-compose -f docker-compose-prod.yml down`
-Once everything is good and ready to go live -
-
-`docker-compose -f docker-compose-prod.yml up --build --detach`
-
-## Contributors:
-
-This project exists thanks to all the people who contribute.
-
-Contributions are more than just welcome. Fork this repo and create a new branch, then submit a pull request
-
-- 1.Fork it [http://github.com/sujaykundu777/devlopr-jekyll/fork](http://github.com/sujaykundu777/devlopr-jekyll/fork )
-
-- 2.Create your feature branch
-`git checkout -b my-new-feature`
-
-- 3.Commit your changes
-`git commit -am 'Add some feature'`
-
-- 4.Push to the branch
-`git push origin my-new-feature`
-
-- 5.Create new Pull Request
-
-### Remove Credits
-
-You can remove credits/footer attribution links, by Donating $5 to our [Open Collective](https://opencollective.com/devlopr-jekyll/donate) or [Buymeacoffee](https://buymeacoffee.com/sujaykundu).
-
-Thanks to all our Backers ! 🙏 [Become a Backer](https://opencollective.com/devlopr-jekyll#backer)
-
-<a href="https://opencollective.com/devlopr-jekyll#backers" target="_blank"><img src="https://opencollective.com/devlopr-jekyll/backers.svg?width=890" /></a>
-
-Also thanks to some cool people for raising funds:
-
-[Dirish Mohan](https://dirishmohan.com)
-
-### For Help :
-
-You can contact me, if you need any help via [Email](mailto:sujaykundu777@gmail.com). If you like the project. Don't forget to :star: !
-
-## Licence
-
-The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT). You can do anything you want, including projects for your clients, as long as you mention an attribution back (credit links in footer). See the [Licence](https://github.com/sujaykundu777/devlopr-jekyll/blob/master/LICENSE) file
-
+Copyright 2013-2018 Blackrock Digital LLC. Code released under the [MIT](https://github.com/BlackrockDigital/startbootstrap-clean-blog-jekyll/blob/gh-pages/LICENSE) license.

@@ -1,5 +1,45 @@
+<!-- Footer -->
+
+<hr>
+
 <footer>
-    <p> Powered by<a href="https://github.com/sujaykundu777/devlopr-jekyll"> devlopr jekyll</a>.Hosted at <a href="https://pages.github.com">Github</a>. Subscribe via
-        <a href="{{ " /feed.xml " | prepend: site.baseurl }}">RSS</a>
-    </p>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <ul class="list-inline text-center">
+          {% if site.twitter_username %}
+          <li class="list-inline-item">
+            <a href="https://www.twitter.com/{{ site.twitter_username }}">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          {% endif %}
+          {% if site.facebook_username %}
+          <li class="list-inline-item">
+            <a href="https://www.facebook.com/{{ site.facebook_username }}">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          {% endif %}
+          {% if site.github_username %}
+          <li class="list-inline-item">
+            <a href="https://github.com/{{ site.github_username }}">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          {% endif %}
+        </ul>
+        <p class="copyright text-muted">Copyright &copy; {{ site.author }} {{ 'now' | date: "%Y" }}</p>
+      </div>
+    </div>
+  </div>
 </footer>
